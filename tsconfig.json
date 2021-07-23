@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "outDir": "./build/",
+        "module": "commonjs",
+        "noImplicitAny": false,
+        "target": "es2018",
+        "sourceMap": true,
+        "plugins": [
+            {
+                "name": "tslint-language-service"
+            }
+        ],
+        "strict": false
+    },
+    "include": ["./src/**/*"],
+    "exclude": ["node_modules"]
+}
