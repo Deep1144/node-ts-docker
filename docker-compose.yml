@@ -1,0 +1,23 @@
+version: '3.4'
+
+services:
+  adminbackend:
+    image: deep-be-setup/adminbackend
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 80:80
+    environment:
+        - SUPER_ADMIN_EMAIL=admin@demo.com
+        - NODE_ENV=production
+        - SUPER_ADMIN_PASSWORD=demo
+        - DEV_secret=dev_secret
+        - SWAGGER_DOC_USERNAME=demo
+        - SWAGGER_DOC_PASS=demo
+        - DB_URI=mongodb+srv://deep:demo@demo.ydeuw.mongodb.net/demo
+        - DEV_HOST=localhost
+        - PORT=80
+        - AWS_ACCESS_KEY_ID=<AWS_ACCESS_KEY_ID>
+        - AWS_SECRET_ACCESS_KEY=<AWS_SECRET_ACCESS_KEY>
+    restart: always
